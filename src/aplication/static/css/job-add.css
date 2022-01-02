@@ -1,0 +1,19 @@
+.auto-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+.manual-form {
+    display: flex;
+    flex-direction: column;
+}
+.form-header {
+    font-size: 1.2rem;
+    color: var(--dark-hover-color);
+}
+.job-add-button {
+    color: var(--navigation-bar-color);
+    width: 10em;
+    font-size: 1.1rem;
+    margin: auto;
+}

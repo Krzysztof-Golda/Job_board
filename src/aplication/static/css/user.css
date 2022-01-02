@@ -1,0 +1,18 @@
+.information {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.change-link {
+    margin: 1.33em 0;
+}
+.user-changes-label {
+    font-size: 1.1rem;
+    margin-right: 2em;
+}
+.send-button {
+    color: var(--navigation-bar-color);
+    min-width: 100px;
+    margin: auto;
+    padding: 5px;
+}

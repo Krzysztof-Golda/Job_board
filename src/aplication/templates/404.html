@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}404{% endblock %}
+{% block style %}
+    {{ super() }}
+    <style>
+        @import url(../static/css/index-style.css);
+        @import url(../static/css/board.css);
+        @import url(../static/css/user.css);
+    </style>    
+{% endblock %}
+{% block navigation %}
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ login }}">Zaloguj</a>
+    </div>
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ register }}">Zarejestruj</a>
+    </div>
+{% endblock %}
+{% block mainContent %}
+    <div class="welcome-card">
+        <h1 class="title-welcome"><span class="color-text">404</span> Podany adres nie istnieje!</h1>
+    </div>
+{% endblock %}

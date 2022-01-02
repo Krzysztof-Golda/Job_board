@@ -1,0 +1,79 @@
+:root {
+    --light-backgrund-color: hsl(180, 52%, 96%);
+    --navigation-bar-color: hsl(180, 29%, 50%);
+    --job-card-color: hsl(180, 31%, 95%);
+    --dark-hover-color: hsl(180, 14%, 20%);
+}
+body, html {
+    background-color: var(--light-backgrund-color);
+    margin: 0;
+    font-size: 15px;
+    font-family: "Spartan", sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Nav Bar */
+
+.title-navbar {
+    background-color: var(--navigation-bar-color);
+    background-image: url(../images/bg-header-desktop.svg);
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr ;
+    padding: 30px 2%;
+    /* max-height: 20%; */
+}
+
+.website-logo {
+    width: 140px;
+    border-radius: 10px;
+}
+
+.navigation-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.nav-box {
+    background-color: var(--light-backgrund-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar-link {
+    margin: auto;
+    color: #5BA4A4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.navbar-link:hover {
+    color: hsl(180, 14%, 20%);
+}
+
+
+/* Main */
+.flash-message {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 1.5rem;
+    color: darkcyan;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--navigation-bar-color);
+    color: var(--light-backgrund-color);
+    padding: 2em;
+    font-size: 1.1rem;
+    text-align: center;
+}

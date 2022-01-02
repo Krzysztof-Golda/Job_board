@@ -1,0 +1,20 @@
+.sign-in-card {
+    padding: 3em;
+    width: 50%;
+    margin: 5em auto;
+    text-align: center;
+    background-color: var(--light-card-color);
+    box-shadow: 0px 7px 8px 3px rgb(0, 0, 0, 0.5);
+    border-radius: 5px;
+    line-height: 1.5;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-button {
+    color: var(--navigation-bar-color);
+    width: 25%;
+    margin: auto;
+}

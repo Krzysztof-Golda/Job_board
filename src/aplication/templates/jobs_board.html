@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Tablica {{ user }}{% endblock %}
+{% block style %}
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    {{ super() }}
+    <style>
+        @import url(../static/css/board.css);
+    </style>    
+{% endblock %}
+{% block navigation %}
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ logout }}">Wyloguj</a>
+    </div>
+    <div class="account-nav">
+        <a class="navbar-link accoutn-link" href="{{ user }}"><i class="fas fa-user-circle fa-3x"></i></a>
+        <p class="hidden-name">{{ user }}</p>
+    </div>
+{% endblock %}
+{% block mainContent %}
+    <div class="add-job">
+        <a class="add-job-link" href="{{ add_job }}">Dodaj nowe pole z ofertą pracy.</a>
+    </div>
+    {% for job_card in job_cards %}
+    <div class="main-jobs">
+        <div class="job-card">
+            {% if "pracuj.pl" in job_card.job_url %}
+                <img class="job-img" src="../static/images/{{ pracuj_img }}" alt="logo-platformy">
+                <div class="job-main-info">
+                    <h3 class="job-name">{{ job_card.job_name }}</h3>
+                    <h5 class="company-name">{{ job_card.company_name }}</h5>
+                </div>
+                <div class="job-addition-info">
+                    <ul class="job-infos">
+                        <li>{{ job_card.job_level }}</li>
+                        <li>{{ job_card.job_city }}</li>
+                        <li>{{ job_card.date_expire }}</li>
+                    </ul>
+                </div>
+                {% if job_card.salary_from != None %}
+                    <div class="salary">
+                        <h5>{{ job_card.salary_from }} - {{ job_card.salary_to }}</h5>
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+        <div class="operating">
+            <a class="icon" href="{{job_card.job_url}}" target="_blank"><i class="fas fa-external-link-square-alt fa-2x"></i></a>
+
+            <a class="icon" href="/delete/{{job_card.id}}"><i class="fas fa-trash fa-2x"></i></a>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="shortcut icon" href="../static/images/favicon.ico">
+        {% block style %}
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+            @import url(../static/css/style.css);
+        </style>
+        {% endblock %}
+    </head>
+    <body>
+        <section class="title-navbar">
+            <div class="title-logo">
+                <img class="website-logo" src="../static/images/JobBoard.png" alt="website logo">
+            </div>
+            <nav class="navigation-bar">
+                {% block navigation %}{% endblock %}
+            </nav>
+        </section>
+        <main>
+            {#{% with messages = get_flashed_messages(with_categories=true) %}#}
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="flash-message">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            {% block mainContent %}{% endblock %}
+        </main>
+        <footer>
+                Copyright &copy; JobBoard 2021 
+        </footer>
+    </body>
+</html>

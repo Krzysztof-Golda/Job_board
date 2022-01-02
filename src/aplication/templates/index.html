@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}JobBoard{% endblock %}
+{% block style %}
+    {{ super() }}
+    <style>
+        @import url(../static/css/index-style.css);
+    </style>    
+{% endblock %}
+{% block navigation %}
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ login }}">Zaloguj</a>
+    </div>
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ register }}">Zarejestruj</a>
+    </div>
+{% endblock %}
+{% block mainContent %}
+    <div class="welcome-card">
+        <h1 class="title-welcome">Witaj na Job<span class="color-text">Board</span>!</h1>
+        <p class="text-welcome">
+            Twojej prywatnej tablicy wspomagającej zarządzanie wybranymi przez Ciebie ofertami pracy.
+            W celu poznania wszystkich funkcji portalu prosimy o <a class="text-link" href="{{ register }}">zalogowanie</a>.
+        </p>
+    </div>
+{% endblock %}

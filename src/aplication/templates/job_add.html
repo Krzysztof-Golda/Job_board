@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Rejestracja{% endblock %}
+{% block style %}
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    {{ super() }}
+    <style>
+        @import url(../static/css/login-style.css);
+        @import url(../static/css/board.css);
+        @import url(../static/css/job-add.css);
+    </style>    
+{% endblock %}
+{% block navigation %}
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ board }}">Powrót</a>
+    </div>
+    <div class="account-nav">
+        <a class="navbar-link accoutn-link" href="{{ user }}"><i class="fas fa-user-circle fa-3x"></i></a>
+        <p class="hidden-name">{{ user }}</p>
+    </div>
+{% endblock %}
+{% block mainContent %}
+    <div class="sign-in-card">
+        <form class="auto-form" action="#" method="post">
+            <p class="form-header">Pobierz dane automatycznie</p>
+            <label for="auto-url-job">Podaj adres url do oferty z pracą (działa tylko z pracuj.pl):</label>
+            <input class="login-input" id="auto-url-job" type="url" name="auto-url-job" required>
+            <br>
+            <div class="radio-box">
+                <input type="radio" name="job-scrap" id="job-scrap" value="pracuj">
+                <label for="job-scrap">pracuj.pl</label>
+                <input type="radio" name="job-scrap" id="job-scrap" value="indeed">
+                <label for="job-scrap">indeed.com</label>
+                <input type="radio" name="job-scrap" id="job-scrap" value="linkedin">
+                <label for="job-scrap">linkedin.com</label>
+            </div>
+            <br>
+            <input class="job-add-button" type="submit" value="Wygeneruj">
+        </form>
+        <p>Lub</p>
+        <form class="manual-form" action="#" method="post">
+            <p class="form-header">Uzupełnij potrzebne dane manualnie</p>
+            <label for="job-name">Podaj nazwę stanowiska:</label>
+            <input class="login-input" id="job-name" type="text" name="job-name" required>
+            <br>
+            <label for="company-name">Podaj nazwę firmy:</label>
+            <input class="login-input" id="company-name" type="text" name="company-name" required>
+            <br>
+            <label for="job-level">Podaj poziom stanowiska:</label>
+            <input class="login-input" id="job-level" type="text" name="job-level" required>
+            <br>
+            <label for="job-date">Podaj date ważności oferty:</label>
+            <input class="login-input" id="job-date" type="date" name="job-date" required>
+            <br>
+            <label for="city-job">Podaj miejscowość miejsca pracy:</label>
+            <input class="login-input" id="city-job" type="text" name="city-job" required>
+            <br>
+            <label for="salary-from">Podaj minimalne widełki wysokość wypłaty za prace (zł):</label>
+            <input class="login-input" id="salary-from" type="number" name="salary-from">
+            <br>
+            <label for="salary-to">Podaj maksymalne widełki wysokość wypłaty za prace (zł):</label>
+            <input class="login-input" id="salary-to" type="number" name="salary-to">
+            <br>
+            <label for="job-url">Podaj adres url do oferty:</label>
+            <input class="login-input" id="job-url" type="url" name="manual-job-url" required>
+            <br>
+            <input class="job-add-button" type="submit" value="Zapisz">
+        </form>
+    </div>
+{% endblock %}

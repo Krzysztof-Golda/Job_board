@@ -1,0 +1,32 @@
+
+
+/* Main */
+.welcome-card {
+    padding: 5%;
+    width: 75%;
+    margin: auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    text-align: center;
+    background-color: var(--light-card-color);
+    box-shadow: 0px 7px 8px 3px rgb(0, 0, 0, 0.5);
+    border-radius: 5px;
+    line-height: 1.5;
+}
+.title-welcome {
+    font-weight: 700;
+}
+.color-text {
+    color: rgb(0, 190, 190);
+}
+.text-welcome{
+    font-size: 1.1rem;
+}
+.text-link {
+    text-decoration: none;
+    color: var(--navigation-bar-color);
+    font-style: italic;
+}
+.text-link:hover {
+    color: var(--dark-hover-color);
+}

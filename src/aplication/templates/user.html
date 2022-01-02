@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}{{ user }}{% endblock %}
+{% block style %}
+    {{ super() }}
+    <style>
+        @import url(../static/css/index-style.css);
+        @import url(../static/css/board.css);
+        @import url(../static/css/user.css);
+    </style>    
+{% endblock %}
+{% block navigation %}
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ logout }}">Wyloguj</a>
+    </div>
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ board }}">Powrót</a>
+    </div>
+{% endblock %}
+{% block mainContent %}
+    <div class="welcome-card">
+        <h1 class="title-welcome">Informacje użytkownika {{ user }}</h1>
+        <!-- <div class="information">
+            <h4 class="info">Nazwa: {{user}}</h4> <a class="change-link" href="change_info">zmień</a>
+        </div>
+        <div class="information">
+            <h4 class="info">email: {{email}}</h4> <a class="change-link" href="change_info">zmień</a>
+        </div> -->
+        <form action="#" method="post">
+            <label class="user-changes-label" for="username">Nazwa: {{ user }}</label>
+            <input type="text" name="username" id="username" placeholder="Nowa nazwa">
+            <br>
+            <label class="user-changes-label" for="email">Email: {{ email }}</label>
+            <input type="email" name="email" id="email" placeholder="Nowy email">
+            <br>
+            <label class="user-changes-label" for="password">Zmień hasło</label>
+            <input type="password" name="password" id="password" placeholder="Nowe hasło"><input type="password" name="password-repeat" id="password-repeat" placeholder="Powtórz hasło">
+            <br>
+            <label class="user-changes-label" for="delete-account">Usuń konto</label>
+            <input type="checkbox" name="delete-account" id="delete-account" value="delete">
+            <br>
+            <input class="send-button" type="submit" value="Wyślij zmiany">
+        </form>
+    </div>
+{% endblock %}

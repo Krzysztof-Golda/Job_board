@@ -1,0 +1,96 @@
+/* Nav */
+.account-nav {
+    background-color: var(--light-backgrund-color);
+    padding: 7%;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hidden-name {
+    margin: auto;
+    color: #5BA4A4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: none;
+}
+.navbar-link:hover + .hidden-name {
+    display: block;
+}
+
+/* Main */
+.add-job {
+    text-align: center;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    width: 40%;
+    top: 175px;
+    /* position: sticky;
+    top: 0;
+    margin: auto;
+    width: 50%; */
+    background-color: var(--light-backgrund-color);
+    padding: 1%;
+    box-shadow: 0px 7px 8px 3px rgb(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.add-job-link {
+    font-size: 1.2rem;
+}
+.main-jobs {
+    display: flex;
+}
+    /* Jobs Cardds */
+.job-card {
+    padding: 5%;
+    width: 60%;
+    margin: auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    text-align: center;
+    background-color: var(--light-card-color);
+    box-shadow: 0px 7px 8px 3px rgb(0, 0, 0, 0.5);
+    border-radius: 5px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+}
+.job-img{
+    width: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1em;
+}
+.job-card > div {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.job-main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.job-name, .company-name{
+    margin: 1em;
+}
+.job-infos {
+    padding-left: 1.5em;
+    margin: 0%;
+}
+.job-infos li {
+    margin: 10px 0;
+}
+.operating {
+    position: relative;
+    left: -10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.icon {
+    color: #5BA4A4;
+}

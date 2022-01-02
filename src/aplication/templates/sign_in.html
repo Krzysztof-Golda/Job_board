@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Logowanie{% endblock %}
+{% block style %}
+    {{ super() }}
+    <style>
+        @import url(../static/css/login-style.css);
+    </style>    
+{% endblock %}
+{% block navigation %}
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ index }}">Powrót</a>
+    </div>
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ register }}">Zarejestruj</a>
+    </div>
+{% endblock %}
+{% block mainContent %}
+    <div class="sign-in-card">
+        <form class="login-form" action="#" method="post">
+            <p class="login-form-header">Podaj dane potrzebne do zalogowania</p>
+            <label for="username">Podaj nazwę użytkownika:</label>
+            <input class="login-input" id="username" type="text" name="username">
+            <br>
+            <label for="user-password">Podaj hasło:</label>
+            <input class="login-input" id="user-pasword" type="password" name="password">
+            <br>
+            <input class="login-button" type="submit" value="Zaloguj">
+        </form>
+    </div>
+{% endblock %}

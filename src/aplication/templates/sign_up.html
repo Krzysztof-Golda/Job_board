@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Rejestracja{% endblock %}
+{% block style %}
+    {{ super() }}
+    <style>
+        @import url(../static/css/login-style.css);
+    </style>    
+{% endblock %}
+{% block navigation %}
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ index }}">Powrót</a>
+    </div>
+    <div class="nav-box">
+        <a class="navbar-link" href="{{ login }}">Zaloguj</a>
+    </div>
+{% endblock %}
+{% block mainContent %}
+    <div class="sign-in-card">
+        <form class="login-form" action="#" method="post">
+            <p class="login-form-header">Podaj dane potrzebne do zarejestrowania</p>
+            <label for="username">Podaj nazwę użytkownika:</label>
+            <input class="login-input" id="username" type="text" name="username" minlength="5" required>
+            <br>
+            <label for="email">Podaj email:</label>
+            <input class="login-input" id="email" type="email" name="email" minlength="5" required>
+            <br>
+            <label for="password">Podaj hasło:</label>
+            <input class="login-input" id="password" type="password" name="password" minlength="5" required>
+            <br>
+            <label for="repeat-password">Podaj ponownie hasło:</label>
+            <input class="login-input" id="repeat-password" type="password" name="repeat-password" minlength="5" required>
+            <br>
+            <input class="login-button" type="submit" value="Zarejestruj">
+        </form>
+    </div>
+{% endblock %}
